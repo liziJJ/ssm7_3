@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 //spring管理业务bean和功能bean（SQL)
 @ComponentScan({"com.ljj.service"})
-@PropertySource("jdbc.properties")
+@PropertySource("classpath:jdbc.properties")
 //加载这两个类的时候，可以把这两个类里面的bean加载进去
 @Import({JdbcConfig.class,MybatisConfig.class})
 @EnableTransactionManagement
